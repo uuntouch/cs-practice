@@ -9,6 +9,8 @@ def winner(names, scores):
 	return winner
 	
 def average(scores):
+	if not scores:
+		return 0
 	return round(sum(scores)/len(scores),2)
 	
 def ranking(names, scores):
