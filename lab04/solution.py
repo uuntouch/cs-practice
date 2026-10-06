@@ -1,5 +1,6 @@
 def winner(names, scores):
-	max_score = scores[0]	
+	max_score = scores[0]
+	winner = names[0]	
 	
 	for i in range(len(scores)):
 		if scores[i]>max_score:
@@ -8,8 +9,7 @@ def winner(names, scores):
 	return winner
 	
 def average(scores):
-	avg = 0
-	return round(sum(scores)/len(scores),1)
+	return round(sum(scores)/len(scores),2)
 	
 def ranking(names, scores):
 	pairs = []
@@ -24,7 +24,8 @@ def ranking(names, scores):
 	return result
 
 def above_average(names, scores):
-	above_avg = [names[i] for i in range(len(scores)) if scores[i] > average(scores)]
+	avg = average(scores)
+	above_avg = [names[i] for i in range(len(scores)) if scores[i] > avg]
 	return above_avg
 
 names =  ["Аня", "Боря", "Вика"]
