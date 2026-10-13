@@ -30,10 +30,15 @@ def above_average(names, scores):
 	above_avg = [names[i] for i in range(len(scores)) if scores[i] > avg]
 	return above_avg
 
-names =  ["Аня", "Боря", "Вика"]
-scores = [7.0,   9.0,    9.0]
+if __name__ == '__main__':
+        names =  ["Аня", "Боря", "Вика"]
+        scores = [7.0,   9.0,    9.0]
 
-print('Победитель:',winner(names,scores))
-print('Среднее значение баллов:',average(scores))
-print('Имена по убыванию результата:',ranking(names,scores))
-print('Имена тех, чей результат строго выше среднего:',above_average(names, scores))
+        print('Победитель:',winner(names,scores))
+        print('Среднее значение баллов:',average(scores))
+        print('Имена по убыванию результата:',ranking(names,scores))
+        print('Имена тех, чей результат строго выше среднего:',above_average(names, scores))
+
+
+        
+
