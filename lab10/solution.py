@@ -1,0 +1,32 @@
+import numpy as np
+
+def make_table(rows, colums):
+    arr = np.arange(0, rows*colums)
+    return arr.reshape(rows,colums)
+
+def rectangle(matrix, row_start, row_stop, column_start, column_stop):
+    arr = np.asarray(matrix)
+    return arr[row_start:row_stop,column_start:column_stop]
+
+def replace_rectangle(matrix, row_start, row_stop, column_start, column_stop, value):
+    arr = np.asarray(matrix).copy()
+    arr[row_start:row_stop,column_start:column_stop] = value
+    return arr
+
+def matrix_vector_product(matrix, vector):
+    return np.asarray(matrix) @ np.asarray(vector)
+
+def matrix_multiply(left, right):
+    return np.asarray(left) @ np.asarray(right)
+
+def transpose_matrix(matrix):
+    return np.asarray(matrix).T
+
+def solve_system(matrix, vector):
+    return np.linalg.solve(np.asarray(matrix), np.asarray(vector))
+
+def tensor_channel_mean(tensor):
+    return np.asarray(tensor).mean(axis=-1)
+
+def point_distance(first, second):
+    return np.linalg.norm(np.asarray(first),np.asarray(second))
